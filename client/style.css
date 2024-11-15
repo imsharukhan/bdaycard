@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to top, #87CEEB, #FFFFFF);
+}
+@media (max-width: 600px) {
+body {
+font-size: 16px; /* Adjust font size for smaller screens */
+}
+
+.balloon {
+width: 80px; /* Adjust balloon size for smaller screens */
+height: 120px;
+}
+}
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.text {
+    text-align: center;
+    color: #333;
+    font-size: 3rem;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+.container {
+background-color: #fff;
+border-radius: 5px;
+padding: 20px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+max-width: 300px; /* Set a maximum width */
+margin: 0 auto; /* Center the container horizontally */
+}
+.message-container {
+display: flex;
+flex-direction: column;
+align-items: flex-end; /* Align the button to the right corner */
+}
+
+
+@media (max-width: 600px) {
+.container {
+max-width: 80%; /* Adjust the maximum width on smaller screens */
+}
+
+.message-container {
+align-items: flex-start; /* Reset the alignment to start on smaller screens */
+flex-direction: column; /* Change the direction to column on smaller screens */
+}
+.send-button {
+width: 25%; /* Make the button full-width on smaller screens */
+margin-top: 10px; /* Add some margin to separate the button from the message box */
+align-self: flex-end; /* Align the button to the right corner */
+}
+}
+
+.message-box {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 15px;
+    width: 100%;
+    height: auto;
+    overflow: hidden; /* Ensure the message doesn't overflow */
+    white-space: pre-wrap; /* Preserve line breaks and spaces */
+    word-break: break-word; /* Break words if necessary to fit in the box */
+}
+
+.typing-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin-right: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+   0% {
+        background-color: #ccc;
+      }
+  50% {
+        background-color: #fff;
+      }
+ 100% {
+         background-color: #ccc;
+     }
+}
+
+.send-button {
+background-color: #4CAF50;
+border: none;
+color: white;
+padding: 10px 20px;
+text-align: center;
+text-decoration: none;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.send-button:hover {
+     background-color: #45a049;
+}
+/*this is for special*/
+
+.highlight {
+  color: #ff69b4; /* Pink color for highlight */
+  font-weight: bold;
+  animation: blowUp 1s forwards;
+}
+
+#colorchange {
+    color: navy;
+    font-weight: bold;
+}
+@keyframes blowUp {
+  0% {
+       transform: scale(1);
+    }
+  50% {
+       transform: scale(2);
+    }
+  100% {
+      transform: scale(1);
+    }
+}
+.blow-up {
+    animation: blowUp 1s forwards;
+    font-size: 3rem;
+    color: #ff69b4;
+    text-shadow: 0 0 10px #ff69b4;
+}
+
+@keyframes blink {
+   0% {
+        background-color: #ccc;
+      }
+  50% {
+        background-color: #fff;
+      }
+ 100% {
+         background-color: #ccc;
+     }
+}
+/*this is for extra purpose*/
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0); }
+}
+@keyframes float {
+    0% { opacity: 1; transform: translateY(0); }
+    100% { opacity: 0; transform: translateY(-500px); }
+}
+
+.emoji{
+    width: 50px;
+    height: 50px;
+}
+/*this is for float */
+.text-1 {
+font-size: 5em;
+animation: fadeIn 1s forwards, bounce 1s forwards;
+}
+
+.text8{
+font-size: 3em;
+}
+
+
+/* Define the animations */
+@keyframes bounce {
+0% { transform: translateY(0); }
+50% { transform: translateY(-20px); }
+100% { transform: translateY(0); }
+}
